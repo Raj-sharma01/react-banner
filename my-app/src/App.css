@@ -1,0 +1,70 @@
+.skew-wrapper {
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+
+.skew-content {
+  display: flex;
+  width: 150%;
+  height: 100%;
+  transform: skewX(-30deg) translateX(-10%);
+  transform-origin: left center;
+}
+
+.section {
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.left {
+  background-color: lightgray;
+  flex: 4;
+}
+
+.middle {
+  background-color: var(--middle-color, black);;
+  flex: 0.05;
+}
+
+.right {
+  background-color:var(--right-color, rgb(147, 10, 10)); 
+  flex: 3;
+}
+
+/* anchor inside the middle section */
+.logo-anchor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: skewX(30deg) translate(-33%, -50%);
+  z-index: 10;
+}
+
+.logo {
+  height: 200px;
+}
+
+.details-container{
+  position: absolute;
+  left:10%;
+  top:50%;
+  transform: translate(0%,-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* vertical space between name, division, id */
+  
+}
+
+.name{
+  font-size: larger;
+  font-weight: bolder;
+}
+.division{
+  font-size: small;
+}
+.id{
+  font-size: small;
+}
+
